@@ -1,4 +1,6 @@
 class EventosController < ApplicationController
+  before_filter :get_evento, only: [:show, :edit, :update, :destroy]
+
   # GET /eventos
   # GET /eventos.json
   def index
@@ -13,8 +15,6 @@ class EventosController < ApplicationController
   # GET /eventos/1
   # GET /eventos/1.json
   def show
-    @evento = Evento.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @evento }
@@ -34,7 +34,6 @@ class EventosController < ApplicationController
 
   # GET /eventos/1/edit
   def edit
-    @evento = Evento.find(params[:id])
   end
 
   # POST /eventos
@@ -56,8 +55,6 @@ class EventosController < ApplicationController
   # PUT /eventos/1
   # PUT /eventos/1.json
   def update
-    @evento = Evento.find(params[:id])
-
     respond_to do |format|
       if @evento.update_attributes(params[:evento])
         format.html { redirect_to @evento, notice: 'Evento was successfully updated.' }
@@ -72,7 +69,6 @@ class EventosController < ApplicationController
   # DELETE /eventos/1
   # DELETE /eventos/1.json
   def destroy
-    @evento = Evento.find(params[:id])
     @evento.destroy
 
     respond_to do |format|
@@ -80,4 +76,9 @@ class EventosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def get_evento
+    @evento = Evento.find(params[:id])
+  end
+
 end

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Agenda::Application.load_tasks
+VotaPratos::Application.load_tasks

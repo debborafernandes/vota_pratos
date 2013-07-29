@@ -1,0 +1,4 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true]
+	"Evento" [shape=Mrecord, label="{Evento|id :integer\lnome :string\llocal :string\linicio :datetime\ltermino :datetime\lcreated_at :datetime\lupdated_at :datetime\l}"]
+}

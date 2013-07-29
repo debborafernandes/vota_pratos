@@ -10,6 +10,8 @@
 # end
 #
 # These inflection rules are supported but not enabled by default:
-# ActiveSupport::Inflector.inflections do |inflect|
+ActiveSupport::Inflector.inflections do |inflect|
+	inflect.irregular 'qualificacao', 'qualificacoes'
+  inflect.irregular 'receita', 'receitas'
 #   inflect.acronym 'RESTful'
-# end
+end
