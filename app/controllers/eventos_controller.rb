@@ -46,7 +46,7 @@ class EventosController < ApplicationController
         format.html { redirect_to @evento, notice: 'Evento was successfully created.' }
         format.json { render json: @evento, status: :created, location: @evento }
       else
-        format.html { render action: "new" }
+        format.html { render :new }
         format.json { render json: @evento.errors, status: :unprocessable_entity }
       end
     end
@@ -60,7 +60,7 @@ class EventosController < ApplicationController
         format.html { redirect_to @evento, notice: 'Evento was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render :edit }
         format.json { render json: @evento.errors, status: :unprocessable_entity }
       end
     end

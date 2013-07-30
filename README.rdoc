@@ -1,11 +1,11 @@
-== Welcome to Vota Pratos
+== Vota Pratos
 
-Exercicio do Cap. 7 das apostila do curso RR-71 Desenv. Ágil para Web com Ruby on Rails
+Exercicio da apostila RR-71 Desenv. Ágil para Web com Ruby on Rails
 
 
 == Getting Started
 
-1. Clone...
+Clone...
 
 
 == Conceitos
@@ -18,4 +18,5 @@ Exercicio do Cap. 7 das apostila do curso RR-71 Desenv. Ágil para Web com Ruby 
 
   Inflections
 
+  Specs -> Validações
   Retomar a partir de "7.18 - Exercícios - Criando o Modelo de Qualificação"

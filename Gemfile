@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -10,11 +9,6 @@ gem 'json'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :development do
-	gem 'hirb'
-	gem 'wirble'
-end
-
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -28,8 +22,23 @@ gem 'jquery-rails'
 gem 'reek'     # Code smell
 gem 'railroady' # Diagram your app
 
+group :development do
+	gem 'hirb'
+	gem 'wirble'
+end
+
+group :development, :test do
+	gem 'metrical'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails'
+  gem 'faker'
+end
+
 #Teste
-gem 'rspec-rails', '~> 2.0'
+group :test do
+  gem "shoulda-matchers"
+  gem 'simplecov-rcov'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
