@@ -50,6 +50,7 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     colored (1.2)
+    commonjs (0.2.6)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -76,6 +77,13 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.0)
     json_pure (1.8.0)
+    less (2.3.2)
+      commonjs (~> 0.2.6)
+    less-rails (2.3.3)
+      actionpack (>= 3.1)
+      less (~> 2.3.1)
+    less-rails-bootstrap (2.3.3)
+      less-rails (~> 2.3.1)
     libv8 (3.11.8.17)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -189,6 +197,11 @@ GEM
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
+    twitter-bootstrap-rails (2.2.7)
+      actionpack (>= 3.1)
+      execjs
+      rails (>= 3.1)
+      railties (>= 3.1)
     tzinfo (0.3.37)
     uglifier (2.1.2)
       execjs (>= 0.3.0)
@@ -205,6 +218,7 @@ DEPENDENCIES
   hirb
   jquery-rails
   json
+  less-rails-bootstrap
   metrical
   mysql2
   railroady
@@ -215,5 +229,6 @@ DEPENDENCIES
   shoulda-matchers
   simplecov-rcov
   therubyracer
+  twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   wirble

@@ -8,15 +8,25 @@ Exercicio da apostila RR-71 Desenv. Ágil para Web com Ruby on Rails
 Clone...
 
 
-== Conceitos
+== Ambiente & Conceitos aplicados
 
+Ambiente
   Rails 3.2
   Ruby  1.9
-  Rspec
   RVM
   Git
 
+Layout
+	Bootstrap
+
+Config
   Inflections
 
-  Specs -> Validações
-  Retomar a partir de "7.18 - Exercícios - Criando o Modelo de Qualificação"
+Testes
+  Rspec
+  Faker
+  FactoryGirl
+
+Metricas
+	rails_best_practices
+	simple-cov
