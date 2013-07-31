@@ -2,6 +2,7 @@ class RestaurantesController < ApplicationController
 
 	before_filter :get_restaurante, only: [:edit, :update, :show, :destroy]
 
+
 	def index
 		@restaurantes = Restaurante.order :nome
 	end
