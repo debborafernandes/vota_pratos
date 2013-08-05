@@ -1,0 +1,39 @@
+<%= form_for @qualificacao, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <ul>
+    <% @qualificacao.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <div class="control-group">
+    <%= f.label :cliente_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :cliente_id, clientes %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :restaurante_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :restaurante_id, restaurantes %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nota, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :nota, :class => 'number_field', in: 1...11 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :valor_gasto, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :valor_gasto, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                qualificacoes_path, :class => 'btn' %>
+  </div>
+<% end %>

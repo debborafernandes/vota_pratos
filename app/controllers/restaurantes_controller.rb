@@ -14,7 +14,7 @@ class RestaurantesController < ApplicationController
 	def create
 		@restaurante = Restaurante.new(params[:restaurante])
 		respond_to do |format|
-			format.html { redirect_to restaurantes_path } if @restaurante.save
+			format.html { redirect_to restaurante_path(@restaurante) } if @restaurante.save
 			format.html { render :new } unless @restaurante.save
 		end
 	end
@@ -35,7 +35,7 @@ class RestaurantesController < ApplicationController
 
 	def destroy
 		@restaurante.destroy
-		redirect_to :index
+		redirect_to restaurantes_path
 	end
 
 	def get_restaurante
